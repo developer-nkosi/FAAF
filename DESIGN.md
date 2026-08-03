@@ -209,7 +209,7 @@ Observed spacing scale: 8px spacing scale.
 
 ## Elevation & Depth
 Observed box-shadow styles: rgba(255, 255, 255, 0.16) 0px 0.8px 0.8px 0px inset; rgba(255, 255, 255, 0.04) 0.972px 0px 0px 0px inset, rgba(255, 255, 255, 0.04) -0.972px 0px 0px 0px inset, rgba(255, 255, 255, 0.1) 0px 0.972px 0px 0px inset, rgba(255, 255, 255, 0.1) 0px 0.486px 0px 0px inset; rgba(0, 0, 0, 0.24) -12px -12px 32px 0px
-
+@
 ## Shapes
 Observed rounded-corner tokens: sm 2.5px, md 5px, lg 6px, xl 7px, full 9999px.
 
