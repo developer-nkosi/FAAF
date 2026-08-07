@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
   <body>
+    <!-- Dot Pattern Background -->
+    <div class="dot-pattern-bg">
+      <svg class="dot-pattern-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <pattern id="dot-pattern-bg" width="60" height="60" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <circle class="dot" cx="30" cy="30" r="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dot-pattern-bg)" />
+      </svg>
+    </div>
     <div class="page-loader" aria-hidden="true"></div>
 
     <header>
@@ -39,7 +50,7 @@
           Moving communities from aid dependency to sustainable self-reliance
         </h1>
         <p class="subtitle">
-          FAAF is a non-profit, community-based organization in Malawi that transforms the development paradigm by investing in human capital — skills development, mentorship, and economic opportunity creation.
+          FAAF is a non-profit, community-based organization in Malawi that transforms the development paradigm by investing in human capital, skills development, mentorship, and economic opportunity creation.
         </p>
         <div class="hero-actions">
           <a href="about.html" class="btn btn-primary">Our Story</a>
@@ -54,15 +65,15 @@
         <div class="grid-2 reveal-stagger">
           <div>
             <span class="label">Our Founder</span>
-            <h2 class="title max-w-480">Boaz Selemani — transforming lived experience into lasting change</h2>
+            <h2 class="title max-w-480">Boaz Selemani transforming lived experience into lasting change</h2>
             <p class="mt-xl">
               Boaz founded FAAF in 2020 at age 20. Born in the DRC and raised in Dzaleka Refugee Camp, he experienced aid dependency firsthand and refused to accept it as permanent reality. Today he leads FAAF through servant leadership, building systems that outlast individual involvement.
             </p>
             <a href="about.html" class="btn btn-secondary mt-xxl">Read His Story</a>
           </div>
           <div class="flex-center" >
-            <div class="card text-center" style="width: 400px; height: 350px;" >
-              <img src="img/1founder.jpeg" alt="Boaz Selemani" class="avatar-img" style="height: 220px; width: 220px;" />
+            <div class="card text-center card--fixed" >
+              <img src="img/1founder.jpeg" alt="Boaz Selemani" class="avatar-img avatar-img--lg" />
               <h3>Boaz Selemani</h3>
               <p class="caption">Founder &amp; Chief Executive Officer</p>
             </div>
@@ -77,7 +88,7 @@
         <span class="label">The Problem</span>
         <h2 class="title">Malawi's development paradox</h2>
         <p class="subtitle max-w-640">
-          Despite billions in international assistance, Malawi remains one of the world's poorest nations. The missing link is not resources — it's relational infrastructure: skills, mentorship, and economic opportunities that convert potential into productivity.
+          Despite billions in international assistance, Malawi remains one of the world's poorest nations. The missing link is not resources it's relational infrastructure: skills, mentorship, and economic opportunities that convert potential into productivity.
         </p>
         <div class="hero-actions mt-xl">
           <a href="about.html#problem" class="btn btn-primary">Learn More</a>
@@ -197,6 +208,7 @@
             <a href="https://www.facebook.com/fromaidtoability" aria-label="Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
             <a href="https://www.instagram.com/fromaidtoabilityfoundation/" aria-label="Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
             <a href="https://x.com/Aidtoability" aria-label="X (Twitter)" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/fromaidtoability/" aria-label="LinkedIn" class="linkedin"><i class="fa fa-linkedin"></i></a>
           </div>
           
         </div>
