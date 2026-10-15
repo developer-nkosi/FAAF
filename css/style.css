@@ -75,7 +75,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  margin: 5px;
+  border-radius: 5px;
   padding: 0;
 }
 
@@ -92,6 +93,13 @@ body {
   background-color: transparent;
   line-height: 1.6;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Typography */
@@ -310,9 +318,26 @@ footer a:hover {
     font-size: 16px;
   }
 
-  .container {
-    padding: 0 16px;
-  }
+   .container {
+     padding: 0 16px;
+   }
+   .reveal-stagger.visible .grid-2>div:nth-child(1),
+   .reveal-stagger.visible .grid-3>div:nth-child(1),
+   .reveal-stagger.visible .grid-4>div:nth-child(1) {
+     transition-delay: 0s;
+   }
+   .reveal-stagger.visible .grid-2>div:nth-child(2),
+   .reveal-stagger.visible .grid-3>div:nth-child(2),
+   .reveal-stagger.visible .grid-4>div:nth-child(2) {
+     transition-delay: 0s;
+   }
+   .reveal-stagger.visible .grid-3>div:nth-child(3),
+   .reveal-stagger.visible .grid-4>div:nth-child(3) {
+     transition-delay: 0s;
+   }
+   .reveal-stagger.visible .grid-4>div:nth-child(4) {
+     transition-delay: 0s;
+   }
 }
 
 /* Header & Navigation */
@@ -324,7 +349,7 @@ header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(16, 16, 16, 0.06);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   z-index: 100;
 }
 
@@ -561,10 +586,13 @@ header {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   padding: 12px 24px;
   text-decoration: none;
-  line-height: 1.4;
+   line-height: 1.4;
+}
+.btn:hover {
+  transform: scale(1.02);
 }
 
 .btn-primary {
@@ -861,13 +889,15 @@ tr:hover td {
 }
 
 footer {
-  background-color: var(--color-on-surface);
+  background-color: rgba(0,0,0,0.6);
   color: var(--color-secondary);
   padding: 40px 0 40px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  margin: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 footer::before {
@@ -891,7 +921,7 @@ footer .label {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: blue;
+  color: var(--color-secondary);
 }
 
 footer h3 {
@@ -914,21 +944,6 @@ footer .social-links {
   align-items: center;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-sm);
-}
-
-footer .social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-secondary);
-  font-size: 20px;
-  opacity: 0.85;
-  transition: all 0.25s ease;
-  text-decoration: none;
 }
 
 footer .social-links a:hover {
@@ -962,13 +977,6 @@ footer .footer-nav {
   flex-direction: column;
   gap: var(--spacing-md);
   margin-top: var(--spacing-sm);
-}
-
-footer .footer-nav a {
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 footer .footer-nav a:hover {
@@ -1193,7 +1201,7 @@ footer .footer-nav a:hover {
 /* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -1388,5 +1396,11 @@ blockquote {
   background: linear-gradient(to top,
       rgba(0, 0, 238, 0.1) 40%,
       transparent 40%);
-  padding: 0 2px;
+   padding: 0 2px;
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --dot-spacing: 40px;
+  }
 }
