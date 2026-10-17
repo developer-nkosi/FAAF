@@ -1404,3 +1404,25 @@ blockquote {
     --dot-spacing: 40px;
   }
 }
+/* Focus visible styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 9999;
+  transition: top 0.3s ease;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 20px;
+}
