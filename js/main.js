@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const navLinkItems = navLinks.querySelectorAll('a');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function() {
@@ -10,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close menu on link click (mobile)
-    const navLinkItems = navLinks.querySelectorAll('a');
     navLinkItems.forEach(function(link) {
       link.addEventListener('click', function() {
         menuToggle.classList.remove('active');
