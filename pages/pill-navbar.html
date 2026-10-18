@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAAF — Floating Pill Navigation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- Floating Pill Navigation Bar -->
+  <nav class="pill-navbar" id="pillNavbar">
+    <div class="pill-nav-container">
+      <!-- Left: Brand -->
+      <a href="#" class="navbar-brand" aria-label="From Aid to Ability Foundation">
+        <span class="brand-text">FAAF</span>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <div class="navbar-center">
+        <div class="nav-links-pill">
+          <ul class="nav-list">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Values</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Actions -->
+      <div class="navbar-actions">
+        <a href="#" class="nav-login">Login</a>
+        <a href="#" class="btn-get-started"> Get started <i class="fa fa-arrow-right"></i> </a>
+        <button class="navbar-mobile-toggle" aria-label="Toggle navigation" id="mobileToggle">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="navbar-overlay" id="navbarOverlay"></div>
+  <div class="navbar-mobile-drawer" id="mobileDrawer">
+    <a href="#" class="drawer-brand" aria-label="From Aid to Ability Foundation">
+      <span>FAAF</span>
+    </a>
+    <ul class="drawer-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Programs</a></li>
+      <li><a href="#">Values</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <a href="#" class="nav-login">Login</a>
+      <a href="#" class="btn-get-started"> Get started <i class="fa fa-arrow-right"></i> </a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <h1>Floating Pill Navigation</h1>
+    <p>
+      A modern, glassmorphism navigation bar built with HTML5, CSS3, and vanilla JavaScript. Using FAAF brand
+      colors (#0000ee primary).
+    </p>
+
+    <div class="section-block">
+      <h2>Home</h2>
+      <p>
+        Welcome to the From Aid to Ability Foundation. We transform communities in Malawi from aid
+        dependency to sustainable self-reliance through skills development, mentorship, and economic
+        opportunity creation.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h2>Programs</h2>
+      <p>
+        Five integrated program pillars: Skills Development, Mentorship Programs, Entrepreneurship &amp;
+        Economic Empowerment, Youth &amp; Child Empowerment, and Community Development &amp; Institutional
+        Strengthening.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h2>Values</h2>
+      <p>
+        Guided by five core values: Ability, Dignity, Independence, Integrity, and Community Transformation.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h2>Team</h2>
+      <p>
+        Led by Founder &amp; CEO Boaz Selemani, our team of committed leaders and community advocates drives
+        sustainable change across Malawi.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h2>Contact</h2>
+      <p>Area 14, Lilongwe, Malawi. Email: fromaidtoability@gmail.com. Phone: +265 994096746.</p>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <script>
+    (function () {
+      const pillNavbar = document.getElementById("pillNavbar");
+      const mobileToggle = document.getElementById("mobileToggle");
+      const mobileDrawer = document.getElementById("mobileDrawer");
+      const overlay = document.getElementById("navbarOverlay");
+
+      if (!pillNavbar) return;
+
+      if (mobileToggle && (!mobileDrawer || !overlay)) {
+        mobileToggle.hidden = true;
+      }
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
+          pillNavbar.classList.add("scrolled");
+        } else {
+          pillNavbar.classList.remove("scrolled");
+        }
+      });
+
+      if (!mobileDrawer || !overlay || !mobileToggle) {
+        const desktopLinks = document.querySelectorAll(".nav-links-pill .nav-list li a");
+        desktopLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            desktopLinks.forEach(function (l) {
+              l.classList.remove("active");
+            });
+            this.classList.add("active");
+          });
+        });
+        return;
+      }
+
+      const drawerLinks = mobileDrawer.querySelectorAll(".drawer-links li a");
+
+      function toggleDrawer() {
+        const isOpen = mobileDrawer.classList.contains("open");
+        if (isOpen) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      }
+
+      function openDrawer() {
+        mobileDrawer.classList.add("open");
+        overlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        mobileToggle.classList.add("active");
+      }
+
+      function closeDrawer() {
+        mobileDrawer.classList.remove("open");
+        overlay.classList.remove("open");
+        document.body.style.overflow = "";
+        mobileToggle.classList.remove("active");
+      }
+
+      mobileToggle.addEventListener("click", toggleDrawer);
+      overlay.addEventListener("click", closeDrawer);
+
+      drawerLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          drawerLinks.forEach(function (l) {
+            l.classList.remove("active");
+          });
+          this.classList.add("active");
+          closeDrawer();
+        });
+      });
+
+      const desktopLinks = document.querySelectorAll(".nav-links-pill .nav-list li a");
+      desktopLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          desktopLinks.forEach(function (l) {
+            l.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>

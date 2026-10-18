@@ -3,43 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the leadership team of From Aid to Ability Foundation — committed leaders driving community empowerment in Malawi." />
   <title>Team & Partners — FAAF</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/pill-navbar.css" />
+  <link rel="stylesheet" href="../css/footer-cta.css" />
+              <style>
+    /* Dark-themed team cards on white background */
+    .leadership-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+
+    .leadership-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-tag {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+      color: #111827;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .leadership-section {
+        padding: 3rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .team-card {
+      background-color: #0a0a0c;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-card:hover .team-image img {
+      transform: scale(1.03);
+    }
+
+    .team-image {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      background: linear-gradient(135deg, #1a1a20 0%, #2d2d3a 100%);
+    }
+
+    .team-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .member-info {
+      padding: 1.5rem;
+    }
+
+    .member-info h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .member-role {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+    }
+
+    .member-bio {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #6b7280;
+      margin: 0;
+      max-height: 7rem;
+      overflow: hidden;
+    }
+
+    .social-links {
+      padding: 1rem 1.5rem;
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f3f4f6;
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .social-link:hover {
+      background: #4f46e5;
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="dot-pattern-bg">
-    <svg class="dot-pattern-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="dot-pattern-bg" width="60" height="60" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-          <circle class="dot" cx="30" cy="30" r="1" />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#dot-pattern-bg)" />
-    </svg>
-  </div>
-  <div class="page-loader" aria-hidden="true"></div>
-  <header>
-    <div class="container nav-container">
-      <a href="../index.html" class="brand">FROM AID <span class="dot">·</span> TO ABILITY</a>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <nav class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">Who We Are</a>
-        <a href="../programs.html">What We Do</a>
-        <a href="../values.html">Our Values</a>
-        <a href="../team.html">Team & Partners</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
+<nav class="pill-navbar" id="pillNavbar">
+  <div class="pill-nav-container">
+    <a href="../index.html" class="navbar-brand" aria-label="From Aid to Ability Foundation">
+      <span class="brand-text">FAAF</span>
+    </a>
+    <div class="navbar-center">
+      <div class="nav-links-pill">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="values.html">Our Values</a></li>
+          <li><a href="team.html">Team & Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+    <div class="navbar-actions">
+      <a href="contact.html" class="nav-login">Contact us</a>
+      <a href="contact.html" class="btn-get-started">Help center <i class="fa fa-arrow-right"></i></a>
+      <button class="navbar-mobile-toggle" aria-label="Toggle navigation" id="mobileToggle">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+  <div class="navbar-overlay" id="navbarOverlay"></div>
+  <div class="navbar-mobile-drawer" id="mobileDrawer">
+    <a href="../index.html" class="drawer-brand" aria-label="From Aid to Ability Foundation">
+      <span>FAAF</span>
+    </a>
+    <ul class="drawer-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="values.html">Our Values</a></li>
+      <li><a href="team.html" class="active">Team & Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <a href="contact.html" class="nav-login">Contact us</a>
+      <a href="contact.html" class="btn-get-started">Help center <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <div class="scroll-progress" aria-hidden="true"></div>
 
   <main id="main-content">
     <!-- Hero -->
@@ -53,7 +208,7 @@
       </div>
     </section>
 
-    <!-- Leadership -->
+    <!-- Leadership / Founder & CEO -->
     <section class="section reveal">
       <div class="container">
         <span class="label">Leadership</span>
@@ -71,7 +226,19 @@
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Our Team -->
+    <section class="leadership-section">
+      <div class="leadership-header">
+        <h2 class="section-tag">OUR TEAM</h2>
+        <h1 class="section-title">Committed Leaders</h1>
+      </div>
+
+      <div class="team-grid" id="teamGrid">
+        <!-- Team members rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Team Members (Role-based cards) -->
     <section class="section section-secondary reveal">
       <div class="container">
         <span class="label">Our Team</span>
@@ -104,7 +271,7 @@
       </div>
     </section>
 
-    <!-- Team Members -->
+    <!-- Team Members with Photos -->
     <section class="section reveal">
       <div class="container">
         <span class="label">Our Team</span>
@@ -114,28 +281,28 @@
         </p>
         <div class="grid-2 mt-xxl reveal-stagger">
           <div class="card">
-            <img src="img/person1.webp" srcset="img/person1.jpg 1x, img/person1.webp 1x" alt="Team Member 1" class="avatar-img" loading="lazy" />
+            <img src="../img/person1.webp" srcset="../img/person1.jpg 1x, ../img/person1.webp 1x" alt="Team Member 1" class="avatar-img" loading="lazy" />
             <div class="p-4">
               <h4>Team Member 1</h4>
               <p class="caption mt-sm">Role</p>
             </div>
           </div>
           <div class="card">
-            <img src="img/person2.webp" srcset="img/person2.jpg 1x, img/person2.webp 1x" alt="Team Member 2" class="avatar-img" loading="lazy" />
+            <img src="../img/person2.webp" srcset="../img/person2.jpg 1x, ../img/person2.webp 1x" alt="Team Member 2" class="avatar-img" loading="lazy" />
             <div class="p-4">
               <h4>Team Member 2</h4>
               <p class="caption mt-sm">Role</p>
             </div>
           </div>
           <div class="card">
-            <img src="img/pesron3.webp" srcset="img/pesron3.jpg 1x, img/pesron3.webp 1x" alt="Team Member 3" class="avatar-img" loading="lazy" />
+            <img src="../img/person3.webp" srcset="../img/person3.jpg 1x, ../img/person3.webp 1x" alt="Team Member 3" class="avatar-img" loading="lazy" />
             <div class="p-4">
               <h4>Team Member 3</h4>
               <p class="caption mt-sm">Role</p>
             </div>
           </div>
           <div class="card">
-            <img src="img/person4.webp" srcset="img/person4.jpg 1x, img/person4.webp 1x" alt="Team Member 4" class="avatar-img" loading="lazy" />
+            <img src="../img/person4.webp" srcset="../img/person4.jpg 1x, ../img/person4.webp 1x" alt="Team Member 4" class="avatar-img" loading="lazy" />
             <div class="p-4">
               <h4>Team Member 4</h4>
               <p class="caption mt-sm">Role</p>
@@ -220,7 +387,7 @@
         </div>
 
         <div class="text-center mt-xxl">
-          <a href="../contact.html" class="btn btn-primary">Become a Partner</a>
+          <a href="contact.html" class="btn btn-primary">Become a Partner</a>
         </div>
       </div>
     </section>
@@ -234,55 +401,178 @@
           FAAF welcomes volunteers and community champions who share our commitment to transformation. Whether you have professional skills to share, time to invest, or resources to contribute, there is a place for you in our mission.
         </p>
         <div class="hero-actions mt-xl justify-center">
-          <a href="../contact.html" class="btn btn-primary">Get Involved</a>
+          <a href="contact.html" class="btn btn-primary">Get Involved</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="grid-2 grid-gap-xxxl">
-        <div>
-          <span class="label text-6">From Aid to Ability Foundation</span>
-          <p class="mt-sm caption">
-            Area 14, Lilongwe, Malawi
-          </p>
-          <p class="mt-xs caption">
-            Email: fromaidtoability@gmail.com
-          </p>
-          <p class="caption">
-            Phone: +265 994096746
-          </p>
-        </div>
-        <div>
-          <h3>Site</h3>
-          <nav class="footer-nav">
-            <a href="../index.html">Home</a>
-            <a href="../about.html">Who We Are</a>
-            <a href="../programs.html">What We Do</a>
-            <a href="../values.html">Our Values</a>
-            <a href="../team.html">Team &amp; Partners</a>
-            <a href="../contact.html">Contact</a>
-          </nav>
-          <h3 class="mt-xxl">Connect</h3>
-          <div class="social-links mt-sm">
-            <a href="https://www.facebook.com/fromaidtoability" aria-label="Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/fromaidtoabilityfoundation/" aria-label="Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://x.com/Aidtoability" aria-label="X (Twitter)" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/fromaidtoability/" aria-label="LinkedIn" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2 class="cta-heading">Join the Transition From Aid to Ability</h2>
+        <p class="cta-subheading">Invest in human capability and community resilience in Malawi. Partner with us to build sustainable self-reliance.</p>
+        <div class="app-badges">
+          <a href="contact.html" class="app-badge app-store" aria-label="Partner With Us">
+            <i class="fa fa-heart"></i> Partner With Us
+          </a>
+          <a href="contact.html" class="app-badge google-play" aria-label="Get Involved">
+            <i class="fa fa-users"></i> Get Involved
+          </a>
         </div>
       </div>
-      <div class="footer-bottom text-7">
-        &copy; 2020-2026 From Aid to Ability Foundation. All rights reserved.
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/faaflogo.png" alt="From Aid to Ability Foundation Logo" class="brand-logo" />
+        <h3 class="brand-name">From Aid to Ability Foundation</h3>
+        <p class="brand-tagline">Transforming communities from aid dependency to sustainable self-reliance.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="column-heading">Programs</h4>
+        <ul class="column-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="programs.html">What We Do <span class="badge">NEW</span></a></li>
+          <li><a href="values.html">Our Values</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="column-heading">About Us</h4>
+        <ul class="column-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="press.html">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="column-heading">Resources</h4>
+        <ul class="column-links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="help-center.html">Help Center</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-support">
+        <h4 class="column-heading">Support</h4>
+        <ul class="column-links">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/fromaidtoability" class="social-icon" aria-label="Facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fromaidtoabilityfoundation/" class="social-icon" aria-label="Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://x.com/Aidtoability" class="social-icon" aria-label="Twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <button class="back-to-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
+    <script>
+    const teamMembers = [
+      {
+        name: "Boaz Selemani",
+        role: "Founder & CEO",
+        bio: "Born in the DRC, raised in Dzaleka Refugee Camp, founded FAAF at age 20. Leads through servant leadership, building systems that outlast individual involvement.",
+        image: "../img/person1.webp",
+        imageFallback: "../img/person1.jpg",
+        social: {
+          twitter: "https://x.com/Aidtoability",
+          facebook: "https://www.facebook.com/fromaidtoability",
+          instagram: "https://www.instagram.com/fromaidtoabilityfoundation/"
+        }
+      },
+      {
+        name: "Sarah Chiwalo",
+        role: "Programs Director",
+        bio: "10+ years in community development and capacity building. Expert in designing market-responsive skills training programs for underserved populations.",
+        image: "../img/person2.webp",
+        imageFallback: "../img/person2.jpg",
+        social: {
+          twitter: "https://x.com/SarahChiwalo",
+          facebook: "https://www.facebook.com/SarahChiwalo",
+          instagram: "https://www.instagram.com/sarahchiwalo"
+        }
+      },
+      {
+        name: "Dr. James Mwalwanda",
+        role: "Medical Coordinator",
+        bio: "Public health specialist with 15 years experience in rural health programs. Focuses on preventive care and community health education initiatives.",
+        image: "../img/person3.webp",
+        imageFallback: "../img/person3.jpg",
+        social: {
+          twitter: "https://x.com/JamesMwalwanda",
+          facebook: "https://www.facebook.com/DrJamesMwalwanda",
+          instagram: "https://www.instagram.com/jamesmwalwanda"
+        }
+      },
+      {
+        name: "Maria Chilemba",
+        role: "Finance Manager",
+        bio: "Chartered accountant with 8 years experience managing non-profit finances. Ensures transparency, accountability, and responsible resource management.",
+        image: "../img/person4.webp",
+        imageFallback: "../img/person4.jpg",
+        social: {
+          twitter: "https://x.com/MariaChilemba",
+          facebook: "https://www.facebook.com/MariaChilemba",
+          instagram: "https://www.instagram.com/mariachilemba"
+        }
+      }
+    ];
+
+    const teamGrid = document.getElementById('teamGrid');
+
+    teamMembers.forEach((member, index) => {
+      const card = document.createElement('div');
+      card.className = 'team-card';
+      card.style.transitionDelay = `${index * 0.1}s`;
+
+      const socialHTML = Object.entries(member.social).map(([platform, url]) => {
+        let iconClass = 'fa fa-twitter';
+        if (platform === 'facebook') iconClass = 'fa fa-facebook';
+        if (platform === 'instagram') iconClass = 'fa fa-instagram';
+        return `<a href="${url}" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="${platform}">
+          <i class="${iconClass}"></i>
+        </a>`;
+      }).join('');
+
+      card.innerHTML = `
+        <div class="team-image">
+          <img src="${member.image}" onerror="this.src='${member.imageFallback}'" alt="${member.name}" loading="lazy" />
+        </div>
+        <div class="member-info">
+          <h3>${member.name}</h3>
+          <p class="member-role">${member.role}</p>
+          <p class="member-bio">${member.bio}</p>
+        </div>
+        <div class="social-links">
+          ${socialHTML}
+        </div>
+      `;
+
+      teamGrid.appendChild(card);
+    });
+  </script>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+      <script src="../js/main.js"></script>
+  <script src="../js/pill-navbar.js"></script>
 </body>
 </html>

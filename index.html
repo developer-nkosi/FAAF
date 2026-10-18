@@ -1,45 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="From Aid to Ability Foundation (FAAF) transforms communities in Malawi from aid dependency to sustainable self-reliance through skills development, mentorship, and economic opportunity creation." />
+  <meta name="keywords"
+    content "FAAF, From Aid to Ability, Malawi, non-profit, skills development, mentorship, economic empowerment, youth empowerment, community development" />
+  <meta name="author" content="From Aid to Ability Foundation" />
   <title>FAAF — From Aid to Ability Foundation</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pill-navbar.css" />
+  <link rel="stylesheet" href="css/footer-cta.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-</head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="dot-pattern-bg">
-      <svg class="dot-pattern-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <pattern id="dot-pattern-bg" width="60" height="60" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-            <circle class="dot" cx="30" cy="30" r="1" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#dot-pattern-bg)" />
-      </svg>
-    </div>
-    <div class="page-loader" aria-hidden="true"></div>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/faaflogo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/faaflogo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-    <header>
-    <div class="container nav-container">
-      <a href="index.html" class="brand">FROM AID TO ABILITY</a>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">Who We Are</a>
-        <a href="programs.html">What We Do</a>
-        <a href="values.html">Our Values</a>
-        <a href="team.html">Team & Partners</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="From Aid to Ability Foundation" />
+  <meta property="og:description"
+    content="Transforming communities in Malawi from aid dependency to sustainable self-reliance through skills development, mentorship, and economic opportunity creation." />
+  <meta property="og:type" content="organization" />
+  <meta property="og:url" content="https://fromaidtoability.org" />
+  <meta property="og:image" content="img/faaflogo.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="From Aid to Ability Foundation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="From Aid to Ability Foundation" />
+  <meta name="twitter:description"
+    content="Transforming communities in Malawi from aid dependency to sustainable self-reliance through skills development, mentorship, and economic opportunity creation." />
+  <meta name="twitter:image" content="img/faaflogo.png" />
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "From Aid to Ability Foundation",
+    "alternateName": "FAAF",
+    "description": "Transforming communities in Malawi from aid dependency to sustainable self-reliance through skills development, mentorship, and economic opportunity creation.",
+    "url": "https://fromaidtoability.org",
+    "logo": "img/faaflogo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+265 994096746",
+      "contactType": "customer service"
+    },
+    "areaServed": "Malawi",
+    "currenciesAccepted": "MWK",
+    "geo": {
+      "@type": "GeoShape",
+      "addressCountry": "Malawi"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <nav class="pill-navbar" id="pillNavbar">
+    <div class="pill-nav-container">
+      <a href="index.html" class="navbar-brand" aria-label="From Aid to Ability Foundation">
+        <span class="brand-text">FAAF</span>
+      </a>
+      <div class="navbar-center">
+        <div class="nav-links-pill">
+          <ul class="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/programs.html">Programs</a></li>
+            <li><a href="pages/values.html">Our Values</a></li>
+            <li><a href="pages/team.html">Team & Partners</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-actions">
+        <a href="pages/contact.html" class="nav-login">Contact us</a>
+        <a href="pages/contact.html" class="btn-get-started">Help center <i class="fa fa-arrow-right"></i></a>
+        <button class="navbar-mobile-toggle" aria-label="Toggle navigation" id="mobileToggle">
+          <span class="hamburger"></span>
+        </button>
+      </div>
     </div>
-  </header>
-  <div class="scroll-progress" aria-hidden="true"></div>
+  </nav>
+  <div class="navbar-overlay" id="navbarOverlay"></div>
+  <div class="navbar-mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="drawer-brand" aria-label="From Aid to Ability Foundation">
+      <span>FAAF</span>
+    </a>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/programs.html">Programs</a></li>
+      <li><a href="pages/values.html">Our Values</a></li>
+      <li><a href="pages/team.html">Team & Partners</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <a href="pages/contact.html" class="nav-login">Contact us</a>
+      <a href="pages/contact.html" class="btn-get-started">Help center <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <main id="main-content">
     <!-- Hero -->
@@ -50,7 +111,8 @@
           Moving communities from aid dependency to sustainable self-reliance
         </h1>
         <p class="subtitle">
-          FAAF is a non-profit, community-based organization in Malawi that transforms the development paradigm by investing in human capital, skills development, mentorship, and economic opportunity creation.
+          FAAF is a non-profit, community-based organization in Malawi that transforms the development paradigm by
+          investing in human capital, skills development, mentorship, and economic opportunity creation.
         </p>
         <div class="hero-actions">
           <a href="about.html" class="btn btn-primary">Our Story</a>
@@ -67,13 +129,15 @@
             <span class="label">Our Founder</span>
             <h2 class="title max-w-480">Boaz Selemani transforming lived experience into lasting change</h2>
             <p class="mt-xl">
-              Boaz founded FAAF in 2020 at age 20. Born in the DRC and raised in Dzaleka Refugee Camp, he experienced aid dependency firsthand and refused to accept it as permanent reality. Today he leads FAAF through servant leadership, building systems that outlast individual involvement.
+              Boaz founded FAAF in 2020 at age 20. Born in the DRC and raised in Dzaleka Refugee Camp, he experienced
+              aid dependency firsthand and refused to accept it as permanent reality. Today he leads FAAF through
+              servant leadership, building systems that outlast individual involvement.
             </p>
             <a href="about.html" class="btn btn-secondary mt-xxl">Read His Story</a>
           </div>
-          <div class="flex-center" >
-            <div class="card text-center card--fixed" >
-               <img src="img/1founder.jpeg" alt="Boaz Selemani" class="avatar-img avatar-img--lg" loading="lazy" />
+          <div class="flex-center">
+            <div class="card text-center card--fixed">
+              <img src="img/1founder.jpeg" alt="Boaz Selemani" class="avatar-img avatar-img--lg" loading="lazy" />
               <h3>Boaz Selemani</h3>
               <p class="caption">Founder &amp; Chief Executive Officer</p>
             </div>
@@ -88,7 +152,9 @@
         <span class="label">The Problem</span>
         <h2 class="title">Malawi's development paradox</h2>
         <p class="subtitle max-w-640">
-          Despite billions in international assistance, Malawi remains one of the world's poorest nations. The missing link is not resources it's relational infrastructure: skills, mentorship, and economic opportunities that convert potential into productivity.
+          Despite billions in international assistance, Malawi remains one of the world's poorest nations. The missing
+          link is not resources it's relational infrastructure: skills, mentorship, and economic opportunities that
+          convert potential into productivity.
         </p>
         <div class="hero-actions mt-xl">
           <a href="about.html#problem" class="btn btn-primary">Learn More</a>
@@ -105,30 +171,61 @@
           <div class="card bento-span-4">
             <h3>Pillar 1</h3>
             <p class="mt-md text-muted">Skills Development</p>
-            <p class="caption mt-sm">Market-responsive technical and soft skills training that converts unemployed individuals into productive workers and entrepreneurs.</p>
+            <p class="caption mt-sm">Market-responsive technical and soft skills training that converts unemployed
+              individuals into productive workers and entrepreneurs.</p>
           </div>
           <div class="card bento-span-4">
             <h3>Pillar 2</h3>
             <p class="mt-md text-muted">Mentorship Programs</p>
-            <p class="caption mt-sm">Relational infrastructure that accelerates growth, prevents costly mistakes, and transmits values alongside skills.</p>
+            <p class="caption mt-sm">Relational infrastructure that accelerates growth, prevents costly mistakes, and
+              transmits values alongside skills.</p>
           </div>
           <div class="card bento-span-4">
             <h3>Pillar 3</h3>
             <p class="mt-md text-muted">Entrepreneurship &amp; Economic Empowerment</p>
-            <p class="caption mt-sm">Converting skills into sustainable enterprises through capital, coaching, and market access.</p>
+            <p class="caption mt-sm">Converting skills into sustainable enterprises through capital, coaching, and
+              market access.</p>
           </div>
           <div class="card bento-span-4">
             <h3>Pillar 4</h3>
             <p class="mt-md text-muted">Youth &amp; Child Empowerment</p>
-            <p class="caption mt-sm">Investing early to prevent dependency before it takes root through leadership academies and child protection.</p>
+            <p class="caption mt-sm">Investing early to prevent dependency before it takes root through leadership
+              academies and child protection.</p>
           </div>
           <div class="card bento-span-4">
             <h3>Pillar 5</h3>
             <p class="mt-md text-muted">Community Development &amp; Institutional Strengthening</p>
-            <p class="caption mt-sm">Building community capacity to manage its own development trajectory with governance training and knowledge exchange.</p>
+            <p class="caption mt-sm">Building community capacity to manage its own development trajectory with
+              governance training and knowledge exchange.</p>
           </div>
           <div class="card bento-span-4 flex-center min-h-140">
             <a href="programs.html" class="btn btn-secondary">View All Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why FAAF Exists -->
+    <section class="section reveal">
+      <div class="container">
+        <span class="label">Why FAAF Exists</span>
+        <h2 class="title">The missing link is human capability</h2>
+        <p class="subtitle max-w-760">
+          Aid can provide resources, but it cannot replace the relationships, skills, and habits that make communities resilient.
+          FAAF focuses on building the structure that helps people become productive, confident, and self-sustaining.
+        </p>
+        <div class="bento-grid mt-xxl reveal-stagger">
+          <div class="card bento-span-4">
+            <h3>Skills that lead to work</h3>
+            <p class="caption mt-sm">We train people in practical, market-relevant skills so they can earn, build, and contribute.</p>
+          </div>
+          <div class="card bento-span-4">
+            <h3>Mentors who guide growth</h3>
+            <p class="caption mt-sm">Our mentorship model creates accountability, confidence, and wise decision-making.</p>
+          </div>
+          <div class="card bento-span-4">
+            <h3>Systems that last</h3>
+            <p class="caption mt-sm">We invest in local leadership, institutions, and networks that continue beyond one project.</p>
           </div>
         </div>
       </div>
@@ -178,51 +275,93 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="grid-2 grid-gap-xxxl">
-        <div>
-          <span class="label text-6">From Aid to Ability Foundation</span>
-          <p class="mt-sm caption">
-            Area 14, Lilongwe, Malawi
-          </p>
-          <p class="mt-xs caption">
-            Email: fromaidtoability@gmail.com
-          </p>
-          <p class="caption">
-            Phone: +265 994096746
-          </p>
-        </div>
-        <div>
-          <h3>Site</h3>
-          <nav class="footer-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">Who We Are</a>
-            <a href="programs.html">What We Do</a>
-            <a href="values.html">Our Values</a>
-            <a href="team.html">Team &amp; Partners</a>
-            <a href="contact.html">Contact</a>
-          </nav>
-          <h3 class="mt-xxl">Connect</h3>
-          <div class="social-links mt-sm">
-            <a href="https://www.facebook.com/fromaidtoability" aria-label="Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/fromaidtoabilityfoundation/" aria-label="Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://x.com/Aidtoability" aria-label="X (Twitter)" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/fromaidtoability/" aria-label="LinkedIn" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
-          
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2 class="cta-heading">Join the Transition From Aid to Ability</h2>
+        <p class="cta-subheading">Invest in human capability and community resilience in Malawi. Partner with us to
+          build sustainable self-reliance.</p>
+        <div class="app-badges">
+          <a href="contact.html" class="app-badge app-store" aria-label="Partner With Us">
+            <i class="fa fa-heart"></i> Partner With Us
+          </a>
+          <a href="contact.html" class="app-badge google-play" aria-label="Get Involved">
+            <i class="fa fa-users"></i> Get Involved
+          </a>
         </div>
       </div>
-      <div class="footer-bottom text-7">
-        &copy; 2020-2026 From Aid to Ability Foundation. All rights reserved.
+    </div>
+  </section>
+
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/pill-navbar.js"></script>
+  <script src="js/footer-cta.js"></script>
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/faaflogo.png" alt="FAAF Logo" class="brand-logo" />
+        <h3 class="brand-name">From Aid to Ability Foundation</h3>
+        <p class="brand-tagline">Transforming communities from aid dependency to sustainable self-reliance.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="column-heading">Programs</h4>
+        <ul class="column-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/programs.html">Programs <span class="badge">NEW</span></a></li>
+          <li><a href="pages/values.html">Values</a></li>
+          <li><a href="pages/team.html">Team</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="column-heading">About us</h4>
+        <ul class="column-links">
+          <li><a href="pages/about.html">Our Story</a></li>
+          <li><a href="pages/team.html">Team</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/documentation.html">Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="column-heading">Resources</h4>
+        <ul class="column-links">
+          <li><a href="pages/about.html">Mission</a></li>
+          <li><a href="pages/help-center.html">Help Center</a></li>
+          <li><a href="pages/programs.html">What We Do</a></li>
+          <li><a href="pages/documentation.html">Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-support">
+        <h4 class="column-heading">Support</h4>
+        <ul class="column-links">
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/status.html">Status</a></li>
+          <li><a href="pages/terms.html">Terms</a></li>
+          <li><a href="pages/privacy.html">Privacy</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/fromaidtoability" class="social-icon" aria-label="Facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fromaidtoabilityfoundation/" class="social-icon" aria-label="Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://x.com/Aidtoability" class="social-icon" aria-label="Twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <button class="back-to-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-
-  <script src="js/main.js"></script>
 </body>
+
+
 </html>

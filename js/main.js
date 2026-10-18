@@ -1,35 +1,19 @@
-// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const navLinkItems = navLinks.querySelectorAll('a');
+  const setActiveNavState = function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navAnchors = document.querySelectorAll('.nav-links a, .nav-links-pill .nav-list li a, .navbar-mobile-drawer .drawer-links li a');
 
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function() {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
+    navAnchors.forEach(function(link) {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const resolvedPage = new URL(href, window.location.href).pathname.split('/').pop() || 'index.html';
+      link.classList.toggle('active', resolvedPage === currentPage);
     });
+  };
 
-    // Close menu on link click (mobile)
-    navLinkItems.forEach(function(link) {
-      link.addEventListener('click', function() {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-      });
-    });
-  }
+  setActiveNavState();
 
-  // Active navigation based on current page
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navAnchors = document.querySelectorAll('.nav-links a');
-  navAnchors.forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href === currentPage) {
-      link.classList.add('active');
-    }
-  });
-
-  // Scroll reveal
   const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
   const observerOptions = {
     threshold: 0.1,
@@ -49,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(el);
   });
 
-  // Back to top button
   const backToTop = document.querySelector('.back-to-top');
   if (backToTop) {
     window.addEventListener('scroll', function() {
@@ -65,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Page loader
   const pageLoader = document.querySelector('.page-loader');
   if (pageLoader) {
     window.addEventListener('load', function() {
@@ -73,16 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
         pageLoader.classList.add('hidden');
       }, 300);
     });
-  }
 
-  // Scroll progress
-  const scrollProgress = document.querySelector('.scroll-progress');
-  if (scrollProgress) {
-    window.addEventListener('scroll', function() {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      scrollProgress.style.width = progress + '%';
-    });
+    setTimeout(function() {
+      if (!pageLoader.classList.contains('hidden')) {
+        pageLoader.classList.add('hidden');
+      }
+    }, 3000);
   }
 });
