@@ -9,146 +9,6 @@
   <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/pill-navbar.css" />
   <link rel="stylesheet" href="../css/footer-cta.css" />
-              <style>
-    /* Dark-themed team cards on white background */
-    .leadership-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 1rem;
-    }
-
-    .leadership-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-tag {
-      display: block;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      color: #9ca3af;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .section-title {
-      font-size: 2.75rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin: 0;
-      color: #111827;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-      .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .leadership-section {
-        padding: 3rem 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .team-card {
-      background-color: #0a0a0c;
-      border-radius: 20px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .team-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .team-card:hover .team-image img {
-      transform: scale(1.03);
-    }
-
-    .team-image {
-      width: 100%;
-      height: 300px;
-      position: relative;
-      background: linear-gradient(135deg, #1a1a20 0%, #2d2d3a 100%);
-    }
-
-    .team-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 0;
-      transition: all 0.3s ease;
-      display: block;
-    }
-
-    .member-info {
-      padding: 1.5rem;
-    }
-
-    .member-info h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #111827;
-      margin: 0 0 0.5rem 0;
-    }
-
-    .member-role {
-      font-size: 0.875rem;
-      color: #9ca3af;
-      margin: 0 0 1rem 0;
-      font-weight: 500;
-    }
-
-    .member-bio {
-      font-size: 0.875rem;
-      line-height: 1.5;
-      color: #6b7280;
-      margin: 0;
-      max-height: 7rem;
-      overflow: hidden;
-    }
-
-    .social-links {
-      padding: 1rem 1.5rem;
-      display: flex;
-      gap: 12px;
-    }
-
-    .social-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #f3f4f6;
-      color: #6b7280;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-    }
-
-    .social-link:hover {
-      background: #4f46e5;
-      color: #ffffff;
-    }
-  </style>
 </head>
 <body>
 <nav class="pill-navbar" id="pillNavbar">
@@ -183,6 +43,7 @@
     </a>
     <ul class="drawer-links">
       <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="programs.html">Programs</a></li>
       <li><a href="values.html">Our Values</a></li>
       <li><a href="team.html" class="active">Team & Partners</a></li>
@@ -540,10 +401,9 @@
 
     const teamGrid = document.getElementById('teamGrid');
 
-    teamMembers.forEach((member, index) => {
+    teamMembers.forEach((member) => {
       const card = document.createElement('div');
       card.className = 'team-card';
-      card.style.transitionDelay = `${index * 0.1}s`;
 
       const socialHTML = Object.entries(member.social).map(([platform, url]) => {
         let iconClass = 'fa fa-twitter';
