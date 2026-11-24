@@ -1,5 +1,5 @@
 /* ============================================================================
-   FAAF Floating Pill Navigation — Vanilla JavaScript
+   FAAF Floating Pill Navigation: Vanilla JavaScript
    ============================================================================ */
 
 (function() {

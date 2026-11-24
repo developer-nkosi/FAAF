@@ -48,9 +48,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 5px;
-  border-radius: 5px;
-  padding: 0;
 }
 
 html {
@@ -183,7 +180,7 @@ p {
   color: rgba(16, 16, 16, 0.5);
 }
 
-/* Links — primary color, no underline by default */
+/* Links: primary color, no underline by default */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -503,7 +500,7 @@ header {
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 93px;
+  border-radius: 10px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -728,8 +725,6 @@ header {
   padding: calc(var(--spacing-xxl) * 2);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
@@ -976,9 +971,7 @@ header {
   }
 }
 
-/* =============================================================================
-   Tables
-   ============================================================================= */
+/* Tables */
 
 .table-wrapper {
   overflow-x: auto;
@@ -1021,9 +1014,7 @@ tr:hover td {
   background-color: rgba(16, 16, 16, 0.02);
 }
 
-/* =============================================================================
-   Footer
-   ============================================================================= */
+/* Footer */
 
 .avatar-img {
   width: 220px;
@@ -1042,8 +1033,6 @@ footer {
   padding: 40px 0 40px;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: var(--shadow-lg);
 }
@@ -1436,9 +1425,7 @@ button:focus-visible {
   transition-delay: 0.2s;
 }
 
-/* =============================================================================
-   Loading State
-   ============================================================================= */
+/* Loading State */
 
 .page-loader {
   position: fixed;
@@ -1477,9 +1464,7 @@ button:focus-visible {
   }
 }
 
-/* =============================================================================
-   Back to top
-   ============================================================================= */
+/* Back to top */
 
 .back-to-top {
   position: fixed;
@@ -1522,9 +1507,7 @@ button:focus-visible {
   stroke-width: 1.5;
 }
 
-/* =============================================================================
-   List styling for programs
-   ============================================================================= */
+/* List styling for programs */
 
 .program-list {
   list-style: none;
@@ -1547,9 +1530,7 @@ button:focus-visible {
   margin-top: 1px;
 }
 
-/* =============================================================================
-   Quote block
-   ============================================================================= */
+/* Quote block */
 
 blockquote {
   border-left: 2px solid var(--color-primary);
@@ -1561,9 +1542,7 @@ blockquote {
   line-height: 1.4;
 }
 
-/* =============================================================================
-   Highlight text
-   ============================================================================= */
+/* Highlight text */
 
 .highlight {
   background: linear-gradient(to top,
